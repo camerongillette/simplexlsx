@@ -1,10 +1,7 @@
 <?php
-include_once('header.php');
-global $ERROR, $user;
-
 $filepath = $_GET['filepath'];
 
-$xlsx = new SimpleXLSX('uploads/countries_and_population.xlsx',false,true);
+$xlsx = new SimpleXLSX($filepath,false,true);
 
 //Get all worksheet id's
 $worksheetIds = [];
